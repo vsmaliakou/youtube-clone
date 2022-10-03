@@ -1,18 +1,19 @@
+import { Box } from '@mui/material';
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Box sx={{ background: '#000' }}>
+      Navbar
+      <Routes>
+        <Route path="/" element={<div>Feed</div>} />
+        <Route path="/video/:id" element={<div>VideoDetail</div>} />
+        <Route path="/channel/:id" element={<div>ChannelDetail</div>} />
+        <Route path="/search/:searchTerm" element={<div>SearchFeed</div>} />
+      </Routes>
+    </Box>
+  </BrowserRouter>
+);
 
 export default App;
