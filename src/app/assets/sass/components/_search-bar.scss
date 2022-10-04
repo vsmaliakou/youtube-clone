@@ -4,12 +4,16 @@
   border-radius: 20px !important;
   box-shadow: none !important;
 
+  @media (min-width: $screen-sm) {
+    margin-right: 40px;
+  }
+
   &__input {
     border: none;
     outline: none;
     width: 350px;
 
-    @media screen and (max-width: $screen-xs) {
+    @media screen and (max-width: $screen-sm) {
       width: 200px;
     }
   }

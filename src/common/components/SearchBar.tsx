@@ -4,7 +4,7 @@ import { Search } from '@mui/icons-material';
 
 const SearchBar: React.FC = () => {
   return (
-    <Paper className="search-bar" component="form" onSubmit={() => {}} sx={{ mr: { sm: 5 } }}>
+    <Paper className="search-bar" component="form" onSubmit={() => {}}>
       <input className="search-bar__input" placeholder="Search..." value="" onChange={() => {}} />
 
       <IconButton className="search-bar__icon" type="submit">
