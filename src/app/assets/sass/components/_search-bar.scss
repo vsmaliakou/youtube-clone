@@ -1,0 +1,21 @@
+.search-bar {
+  padding-left: 16px;
+  border: 1px solid $color-gray;
+  border-radius: 20px !important;
+  box-shadow: none !important;
+
+  &__input {
+    border: none;
+    outline: none;
+    width: 350px;
+
+    @media screen and (max-width: $screen-xs) {
+      width: 200px;
+    }
+  }
+
+  &__icon {
+    padding: 10px !important;
+    color: $color-red !important;
+  }
+}
