@@ -2,12 +2,19 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import { categories } from 'common/utils/constants';
 
-const selectedCategory = 'New';
+interface IComponentProps {
+  selectedCategory: string;
+  setSelectedCategory: (selectedCategory: string) => void;
+}
 
-const SideBar: React.FC = () => (
+const SideBar: React.FC<IComponentProps> = ({ selectedCategory, setSelectedCategory }) => (
   <Stack className="sidebar">
     {categories.map((category) => (
-      <button className={`sidebar__btn ${category.name === selectedCategory && 'sidebar__btn--selected'}`} key={category.name}>
+      <button
+        key={category.name}
+        className={`sidebar__btn ${category.name === selectedCategory && 'sidebar__btn--selected'}`}
+        onClick={() => setSelectedCategory(category.name)}
+      >
         <span className={`sidebar__icon ${category.name === selectedCategory && 'sidebar__icon--selected'}`}>
           {category.icon}
         </span>

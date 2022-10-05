@@ -1,0 +1,34 @@
+.video-card {
+  width: 356px;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  @media (min-width: $screen-lg) {
+    width: 320px;
+  }
+
+  &__poster {
+    height: 180px;
+  }
+
+  &__content {
+    background-color: $color-black-light;
+    height: 106px;
+  }
+
+  &__title {
+    font-weight: bold !important;
+    color: $color-white;
+  }
+
+  &__subtitle {
+    font-weight: bold !important;
+    color: $color-gray-dark;
+  }
+
+  &__icon {
+    font-size: 12px !important;
+    color: $color-gray-dark;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,36 @@
+.channel-card {
+  width: 356px;
+  height: 326px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: none;
+
+  @media (min-width: $screen-lg) {
+    width: 320px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 16px;
+    border: 1px solid $color-gray;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    font-size: 14px !important;
+    color: $color-gray-dark;
+    margin-left: 5px;
+  }
+}
