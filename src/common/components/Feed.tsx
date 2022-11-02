@@ -9,7 +9,7 @@ const Feed: React.FC = () => {
   const [videos, setVideos] = useState<IVideoModel[]>([]);
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snipped&q=${selectedCategory}`, 'snippet,id').then((data) => {
+    fetchFromAPI(`search?part=snippet,id&q=${selectedCategory}`).then((data) => {
       const filteredItems = data.items.filter((item: IVideoModel) => item.id.videoId);
       setVideos(filteredItems);
     });
