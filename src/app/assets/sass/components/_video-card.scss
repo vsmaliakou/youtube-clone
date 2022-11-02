@@ -1,11 +1,6 @@
 .video-card {
-  width: 356px;
   box-shadow: none !important;
   border-radius: 0 !important;
-
-  @media (min-width: $screen-lg) {
-    width: 320px;
-  }
 
   &__poster {
     height: 180px;

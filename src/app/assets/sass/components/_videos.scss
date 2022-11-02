@@ -3,4 +3,22 @@
   flex-wrap: wrap;
   justify-content: start;
   gap: 16px;
+
+  &__item {
+    width: 100%;
+
+    @media (min-width: $screen-sm) {
+      width: 320px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 358px;
+    }
+  }
+
+  &__column {
+    @media (min-width: $screen-lg) {
+      flex-direction: column !important;
+    }
+  }
 }

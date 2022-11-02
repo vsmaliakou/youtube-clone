@@ -5,13 +5,18 @@ import { IVideoModel } from 'common/models';
 
 interface IComponentProps {
   videos: IVideoModel[];
+  className?: string;
 }
 
-const Videos: React.FC<IComponentProps> = ({ videos }) => {
+const Videos: React.FC<IComponentProps> = ({ videos, className }) => {
+  if (!videos.length) {
+    return null;
+  }
+
   return (
-    <Stack className="videos">
+    <Stack className={`videos ${className}`}>
       {videos.map((item, index) => (
-        <Box key={index}>
+        <Box className="videos__item" key={index}>
           {item.id.videoId && <VideoCard video={item} />}
           {item.id.channelId && <ChannelCard channelDetail={item} />}
         </Box>

@@ -7,3 +7,4 @@ export { default as VideoCard } from 'common/components/VideoCard';
 export { default as ChannelCard } from 'common/components/ChannelCard';
 export { default as ChannelDetail } from 'common/components/ChannelDetail';
 export { default as SearchFeed } from 'common/components/SearchFeed';
+export { default as VideoDetail } from 'common/components/VideoDetail';
